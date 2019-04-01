@@ -6,6 +6,7 @@
 import sys
 import importlib
 
+# 设置编码格式
 importlib.reload(sys)
 # 导入faker包生成数据
 # 想要生成的数据字段到官方文档找
