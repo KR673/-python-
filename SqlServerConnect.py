@@ -1,4 +1,4 @@
-import pymssql
+from pymssql import *
 # pip install pymssql
  
 # server    数据库服务器名称或IP
@@ -10,7 +10,7 @@ server = "192.168.1.5"
 user = "sa"
 password = "P@sswordForSA"
 database = "ZhongYeLearn"
-conn = pymssql.connect(server, user, password, database)
+conn = connect(server, user, password, database)
 cursor = conn.cursor()
 cursor.execute("select * from ActivityMayEighteenth")
 row=cursor.fetchone()
