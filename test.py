@@ -1,6 +1,8 @@
-class User(object):
-    pass
+from enum import Enum
 
-
-if __name__ == '__main__':
-    print(dir(User()))
+try:
+    source = Enum('source', {'username':'admin', 'password':'123455'})
+    Number = Enum('Number', ('one', 'two'))
+    
+except Exception as a:
+    print('Error : {}'.format(a))
