@@ -17,6 +17,6 @@ def output_file(param):
     target.close
 
 if __name__ == '__main__':
-    url = 'https://segmentfault.com/'
+    url = 'https://segmentfault.com/hottest/weekly'
     soup = BeautifulSoup(get_response(url), 'html.parser')
     print('\n'.join([x.text for x in  soup.find_all('h4')]))
