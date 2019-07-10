@@ -8,7 +8,11 @@ import random
 importlib.reload(sys)
 
 def request_update_status():
-    print(2)
+    pam = random.randint(0, 60) * 60
+    time.sleep(pam)
+    file = open('E:\\scheduleTest.txt', 'a')
+    file.writelines(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + ' 执行成功\n')
+    file.close
 
 if __name__ == "__main__":
     scheduler = BlockingScheduler()
