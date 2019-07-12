@@ -1,1 +1,2 @@
-from ..packagetwo import two
+def run():
+    print('one')
